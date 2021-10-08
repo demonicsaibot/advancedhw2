@@ -1,0 +1,25 @@
+@mixin laptop{
+    @media(min-width: 767px) and (max-width:1199px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media(max-width:767px){
+        @content;
+    }
+}
+@mixin desktop{
+   @media(min-width:1199px){
+       @content;
+   }
+}
+@mixin d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin grid-column($columns,$gap){
+    display: grid;
+    grid-template-columns: repeat($columns,1fr);
+    gap:$gap;
+}

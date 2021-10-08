@@ -1,0 +1,23 @@
+@import "variables.scss";
+@import "reset.scss";
+@import "mixins.scss";
+@import "./header/index.scss";
+@import "./main-section/recent-post.scss";
+@import "./footer/footer.scss";
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin:0 auto;
+    width:100%;
+    min-width: 320px;
+}
+.content{
+    margin: 0 25px 0 28px;
+    @include laptop{
+        margin: 0 92px 0 80px;
+    }
+    @include desktop{
+        margin: 0 40px;
+    }
+}

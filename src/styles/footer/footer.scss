@@ -1,0 +1,86 @@
+.main-footer {
+    background-color: #000000;
+    width: 100%;
+    @include desktop{
+        margin-top: 69px;
+    }
+    &__info {
+        @include d-flex-center;
+        flex-direction: column;
+        padding: 38px 35px;
+
+        @include laptop {
+            padding: 57px 138px 56px 118px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $primary-title-text-color;
+
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 20px;
+        color: $primary-text-color;
+        text-align: center;
+        margin-top: 8px;
+        &--hidden {
+            @include mobile {
+                display: none
+            }
+        }
+        @include mobile {
+            max-width: 300px;
+        }
+        @include laptop{
+            max-width: 500px;
+        }
+        @include desktop{
+            max-width: 500px
+        }
+    }
+    &__social-list {
+        @include d-flex-center;
+        margin-top: 26px;
+        margin-bottom: 25px;
+
+    }
+    &__social-link{
+        margin-right: 5px;
+        @include laptop{
+            margin-right: 7px;
+        }
+        @include desktop{
+            margin-right: 10px;
+        }
+    }
+    &__contacts{
+        @include d-flex-center;
+        flex-direction: column;
+        @include laptop{
+            flex-direction: row;
+        }
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+    &__link {
+        font-size: 14px;
+        line-height: 24px;
+        text-decoration: none;
+        cursor: pointer;
+        color: $primary-text-color;
+    }
+    &__link:not(:last-child)::after {
+        content: "/";
+        margin-left: 5px;
+        @include laptop{
+            margin-right:5px;
+        }
+        
+    }
+}

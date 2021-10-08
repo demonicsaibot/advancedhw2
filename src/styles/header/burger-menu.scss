@@ -1,0 +1,84 @@
+.main-header {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+
+    &__burger-menu {
+        width: 44px;
+        height: 37px;
+        cursor: pointer;
+        background: url("/dist/img/header/burger-icon/burger-menu-icon-closed.png") no-repeat center/contain;
+        background-color: #000000;
+        margin: 23px 0;
+        &--active {
+            background: url("/dist/img/header/burger-icon/burger-menu-icon-open.png")
+        }
+
+        @include laptop{
+            display: none;
+        }
+        @include desktop{
+            display: none;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 75%;
+        width: 182px;
+        height: 208px;
+        background-color: #F5F5F5;
+        opacity: 0;
+        transition: .5s all;
+        &--active {
+            opacity: 1;
+            transition: .5s all;
+        }
+        @include laptop {
+            opacity: 1;
+            @include d-flex-center;
+            background-color: transparent;
+            position: relative;
+            width: 100%;
+            justify-content: space-around;
+            height: 100%;
+            margin: 40px 50px 40px;
+
+        }
+        @include desktop{
+            opacity: 1;
+            @include d-flex-center;
+            background-color: transparent;
+            position: relative;
+            width: 100%;
+            justify-content: space-around;
+            height: 100%;
+            margin: 40px 100px 40px;
+            
+        }
+
+    }
+
+    &__item {
+        height: 30px;
+    }
+
+    &__item:hover {
+        @include mobile{
+            background-color: #E5E5E5;
+            border: none;
+        }
+    }
+
+    &__link {
+        padding: 5px 0 2px 13px;
+        color: $main-text-color;
+        text-decoration: none;
+        font-size: 11px;
+        line-height: 22px;
+        text-transform: uppercase;
+    }
+    &__link:hover {
+        color: #57A4A4;
+    }
+}
