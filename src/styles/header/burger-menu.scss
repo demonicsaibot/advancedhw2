@@ -11,7 +11,7 @@
         background-color: #000000;
         margin: 23px 0;
         &--active {
-            background: url("./dist/img/header/burger-icon/burger-menu-icon-open.png")
+            background: url("/dist/img/header/burger-icon/burger-menu-icon-open.png")
         }
 
         @include laptop{
